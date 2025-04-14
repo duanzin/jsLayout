@@ -1,10 +1,30 @@
+import AvantiLogo from '../../images/Grupo 21089.svg';
+import Boleto from '../../images/icon-boleto___ffe2ba684569d29f8e546b10457c48f8.svg';
+import Pix from '../../images/União 39.svg';
+import Paypal from '../../images/União 38.svg';
+import PaymentMethod from '../../images/c.svg';
+import Elo from '../../images/elo.svg';
+import Hipercard from '../../images/Caminho 19362.svg';
+import Visa from '../../images/visa.svg';
+import Mastercard from '../../images/União 32.svg';
+import Amex from '../../images/União 34.svg';
+import Encrypt from '../../images/Group.svg';
+import Vtex from '../../images/vtex-pci-200.png';
+import Vtex2 from '../../images/vtex-logo.svg';
+
 export function createFooter() {
     return `
       <footer>
         <div class="footer-info">
           <ul>
             <li>
-              <h3>AVANTI</h3>
+              <img src="${AvantiLogo}" alt="Logo Avanti" />
+              <div>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-tiktok"></i>
+              </div>
             </li>
             <li>
               <h4>Institucional</h4>
@@ -33,6 +53,17 @@ export function createFooter() {
               </h5>
             </li>
           </ul>
+          <div class = "footer-info-logos">
+            <img src="${Amex}" alt="Amex" />
+            <img src="${Mastercard}" alt="Mastercard" />
+            <img src="${Visa}" alt="Visa" />
+            <img src="${Hipercard}" alt="Hipercard" />
+            <img src="${Elo}" alt="Elo" />
+            <img src="${PaymentMethod}" alt="Payment Method" />
+            <img src="${Paypal}" alt="Paypal" />
+            <img src="${Pix}" alt="Pix" />
+            <img src="${Boleto}" alt="Boleto" />
+          </div>
         </div>
         <div class="bottom-text">
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
@@ -42,6 +73,12 @@ export function createFooter() {
            vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
            qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
           </p>
+          <div>
+            <img src="${Encrypt}" alt="Encrypt" />
+            <img src="${Vtex}" alt="Vtex" />
+            <img src="${AvantiLogo}" alt="Avanti Logo" />
+            <img src="${Vtex2}" alt="Vtex logo" />
+          </div>
         </div>
       </footer>
     `;

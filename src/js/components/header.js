@@ -1,10 +1,12 @@
+import AvantiLogo from '../../images/Grupo 21089.svg';
+
 export function createHeader() {
   return `
       <div class="top-bar">
         <p>Cash: R$10,00 de desconto no seu primeiro pedido. Utilize o cupom <i>DESCONTO123</i></p>
       </div>
       <div class="header-main">
-        <h1 class="logo">AVANTI</h1>
+        <h1><img src="${AvantiLogo}" alt="Logo Avanti" /></h1>
         <div class="search-bar">
           <input type="text" placeholder="Digite aqui o que você procura">
           <span class="material-icons-outlined">search</span>
