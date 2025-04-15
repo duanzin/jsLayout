@@ -19,8 +19,16 @@ header {
 
 .top-bar p {
   color: #FFFFFF;
-  font-size: 14px;
   font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+
+.top-bar p span {
+  background-color: #6220C1;
+  border-radius: 4px;
+  padding: 0 5px;
 }
 
 .header-main {
@@ -54,7 +62,7 @@ header {
   font-weight: 600;
 }
 
-.search-bar span {
+.search-bar i {
   cursor: pointer;
   padding-right: 10px;
   padding-left: 10px;
@@ -64,13 +72,14 @@ header {
   display: flex;
   align-items: center;
   height: 28px;
+  position: relative;
 }
 
-.user-actions span {
+.user-actions i {
   font-size: 28px;
 }
 
-.user-actions span:first-child {
+.user-actions i:first-child {
   color: #005CFF;
 }
 
@@ -79,6 +88,25 @@ header {
   font-weight: 600;
   line-height: 14px;
   margin-right: 24px;
+}
+
+.user-actions span {
+  position: absolute;
+  right: -9px;
+  top: -9px;
+  color: #FFFFFF;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0%;
+  height: 21px;
+  width: 21px;
+  background-color: #005CFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ul-bar {
