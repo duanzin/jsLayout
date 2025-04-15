@@ -138,6 +138,7 @@ header {
   background-color: #E7E7EA;
   text-align: center;
   max-height: 510px;
+  margin-bottom: 45px;
 }
 
 .sale img {
@@ -170,7 +171,7 @@ header {
 
 .lancamentos {
   max-width: 1260px;
-  margin: 0 auto;
+  margin: 45px auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -362,7 +363,7 @@ header {
 .banner {
   max-width: 1177px;
   height: 747px;
-  margin: 0 auto;
+  margin: 45px auto;
   display: flex;
   flex-direction:row;
 }
@@ -466,6 +467,7 @@ header {
 .third-banner {
   width: 100vw;
   position: relative;
+  margin: 45px 0;
 }
 
 .third-banner img {
@@ -494,7 +496,7 @@ header {
 
 .newsletter {
   max-width: 1260px;
-  margin: 0 auto;
+  margin: 45px auto;
 }
 
 .newsletter h2 {
