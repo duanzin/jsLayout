@@ -10,7 +10,7 @@ export function createLancamentos() {
           <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
           <div>
             <p>
-              R$100,00</br>
+              <s>R$100,00</s></br>
               <strong>R$79,90</strong>
             </p>
             <span>10% OFF</span>
