@@ -1,8 +1,9 @@
-import shirtImage from '../../images/2j0a2073 1.png';
+import shirtImage from "../../images/2j0a2073 1.png";
 
 export function createLancamentos() {
   const productItems = Array(5)
-    .fill(`
+    .fill(
+      `
       <li>
         <img src=${shirtImage} alt="Produto" />
         <div class="product-info">
@@ -18,14 +19,29 @@ export function createLancamentos() {
         </div>
         <button>Comprar</button>
       </li>
-    `)
-    .join('');
-    return `
+    `
+    )
+    .join("");
+  return `
     <section class="lancamentos">
-      <h2>Lançamentos</h2>
+      <div>
+        <h2>Lançamentos</h2>
+        <span>Ver mais</span>
+      </div>
       <ul class="product-list">
+        <span class="arrow">
+          <i class="material-icons-outlined">arrow_back</i>
+        </span>
         ${productItems}
+        <span class="arrow">
+          <i class="material-icons-outlined">arrow_forward</i>
+        </span>
       </ul>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </section>
     `;
-  }
+}
