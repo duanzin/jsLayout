@@ -389,6 +389,78 @@ header {
   letter-spacing: 0;
 }
 
+@media (max-width: 1274px) {
+  .sale {
+    max-height: auto;
+    min-height: 306px;
+  }
+
+  .sale img {
+    width: 100%;
+    height: auto;
+    min-height: 312px;
+    min-width: 419px;
+  }
+
+  .sale-text {
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 989px) {
+  .sale img {
+    height: 306px;
+    width: 411px;
+  }
+
+  .sale-text h2 {
+    font-size: 70px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+
+  .sale-text p {
+    font-size: 32px;
+    letter-spacing: 0%;
+  }
+
+  .sale-text p strong {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 809px) {
+  .sale-text h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .sale-text p {
+    font-size: 12px;
+    line-height: 40px;
+  }
+
+  .sale-text p strong {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 639px) {
+  .sale {
+    position: relative;
+
+  }
+  .sale img {
+    transform: translateX(-25%);
+  }
+
+  .sale-text {
+    position: sticky;
+    right: 0;
+  }
+}
+
 .lancamentos {
   max-width: 1260px;
   margin: 45px auto;
