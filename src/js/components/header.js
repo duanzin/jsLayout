@@ -46,6 +46,18 @@ export function createHeader() {
     });
   });
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const searchButton = document.getElementById("search-button");
+    const searchInput = document.getElementById("search-input");
+
+    searchButton.addEventListener("click", () => {
+      const searchValue = searchInput.value.trim();
+      if (searchValue) {
+        searchInput.value = `Você buscou por: '${searchValue}'`;
+      }
+    });
+  });
+
   const barDepartments = Array(8)
     .fill(
       `
@@ -76,8 +88,8 @@ export function createHeader() {
       <div class="header-main">
         <h1><img src="${AvantiLogo}" alt="Logo Avanti" /></h1>
         <div class="search-bar">
-          <input type="text" placeholder="Digite aqui o que você procura">
-          <i class="material-icons-outlined">search</i>
+          <input id="search-input" type="text" placeholder="Digite aqui o que você procura">
+          <i id="search-button" class="material-icons-outlined">search</i>
         </div>
         <div class="user-actions">
           <i class="material-icons-outlined">
