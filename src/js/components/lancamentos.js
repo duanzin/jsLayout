@@ -1,7 +1,27 @@
 import shirtImage from "../../images/2j0a2073 1.png";
 
 export function createLancamentos() {
-  const productItems = Array(5)
+  document.addEventListener("DOMContentLoaded", () => {
+    const productList = document.querySelector(".product-list");
+    const arrowBack = document.querySelector(".arrow-back");
+    const arrowForward = document.querySelector(".arrow-forward");
+
+    let scrollPosition = 0;
+    const scrollAmount = 255;
+
+    arrowForward.addEventListener("click", () => {
+      const maxScroll = productList.scrollWidth - productList.clientWidth;
+      scrollPosition = Math.min(scrollPosition + scrollAmount, maxScroll);
+      productList.style.transform = `translateX(-${scrollPosition}px)`;
+    });
+
+    arrowBack.addEventListener("click", () => {
+      scrollPosition = Math.max(scrollPosition - scrollAmount, 0);
+      productList.style.transform = `translateX(-${scrollPosition}px)`;
+    });
+  });
+
+  const productItems = Array(15)
     .fill(
       `
       <li>
@@ -23,25 +43,24 @@ export function createLancamentos() {
     )
     .join("");
   return `
-    <section class="lancamentos">
-      <div>
-        <h2>Lançamentos</h2>
-        <span>Ver mais</span>
+  <section class="lancamentos">
+    <div>
+      <h2>Lançamentos</h2>
+      <span>Ver mais</span>
+    </div>
+    <div class="carousel-wrapper">
+      <span class="arrow arrow-back">
+        <i class="material-icons-outlined">arrow_back</i>
+      </span>
+      <div class="carousel-container">
+        <ul class="product-list">
+          ${productItems}
+        </ul>
       </div>
-      <ul class="product-list">
-        <span class="arrow">
-          <i class="material-icons-outlined">arrow_back</i>
-        </span>
-        ${productItems}
-        <span class="arrow">
-          <i class="material-icons-outlined">arrow_forward</i>
-        </span>
-      </ul>
-      <div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </section>
-    `;
+      <span class="arrow arrow-forward">
+        <i class="material-icons-outlined">arrow_forward</i>
+      </span>
+    </div>
+  </section>
+  `;
 }

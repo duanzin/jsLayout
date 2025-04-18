@@ -355,34 +355,22 @@ header {
   color: #303030;
 }
 
-.lancamentos div:last-child {
-  width: auto;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 7px;
-}
-
-.lancamentos div:last-child div {
-  width: 7px;
-  height: 7px;
-  background-color: #838383;
-  border-radius: 50%;
-}
-
-.lancamentos div:last-child div:first-child {
-  background-color: #303030;
-}
-
 .lancamentos h2 {
   font-size: 20px;
   font-weight: 700;
 }
 
-.product-list {
+.carousel-wrapper {
   position: relative;
+  width: 100%;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.product-list {
   width: 100%;
   list-style-type: none;
   display: flex;
@@ -391,6 +379,7 @@ header {
   align-items: center;
   gap: 17px;
   padding: 0;
+  transition: transform 0.5s ease-in-out;
 }
 
 .arrow {
@@ -404,14 +393,18 @@ header {
   justify-content: center;
   align-items: center;
   box-shadow: 0px 3px 4px 0px #00000040;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 10;
+  top: 50%;
 }
 
-.arrow:first-child {
+.arrow-back {
   left: -14px;
 }
 
-.arrow:last-child {
-  right: -12px;
+.arrow-forward {
+  right: -14px;
 }
 
 .arrow i {
@@ -429,6 +422,7 @@ header {
   border: 1px solid #DDDDDD;
   border-radius: 8px;
   padding: 10px;
+  flex-shrink: 0;
 }
 
 .product-list li img {
