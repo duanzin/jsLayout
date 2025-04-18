@@ -83,9 +83,10 @@ export function createHeader() {
 
   return `
       <div class="top-bar">
-        <p>Cash: <span>R$10,00</span> de desconto no seu primeiro pedido. Utilize o cupom <i>DESCONTO123</i></p>
+        <p>Ganhe <span>R$10,00</span> de desconto no seu primeiro pedido. Utilize o cupom <i>DESCONTO123</i></p>
       </div>
       <div class="header-main">
+        <i class="material-icons-outlined">menu</i>
         <h1><img src="${AvantiLogo}" alt="Logo Avanti" /></h1>
         <div class="search-bar">
           <input id="search-input" type="text" placeholder="Digite aqui o que você procura">

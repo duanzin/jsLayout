@@ -40,6 +40,10 @@ header {
   margin: 0 auto;
 }
 
+.header-main i:first-child {
+  display:none;
+}
+
 .search-bar {
   width: 45%;
   display: flex;
@@ -116,6 +120,7 @@ header {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .ul-bar li {
@@ -287,6 +292,62 @@ header {
   color: #FFFFFF;
   width: 116px;
   height: 38px;
+}
+
+@media (max-width: 1289px) {
+  .header-main, .ul-bar {
+    padding: 10px 15px;
+  }
+
+  .ul-bar {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1039px) {
+  .ul-bar {
+    display: none;
+  }
+}
+
+@media (max-width: 719px) {
+  .top-bar {
+    padding: 5px 15px;
+  }
+
+  .header-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .header-main i:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    order: 0;
+  }
+
+  .search-bar {
+    width: 100%;
+    order: 3;
+  }
+
+  .user-actions {
+    order: 2;
+  }
+
+  .user-actions i:first-child, .user-actions p {
+    display: none;
+  }
+
+  h1 {
+    order: 1;
+  }
 }
 
 .sale {
