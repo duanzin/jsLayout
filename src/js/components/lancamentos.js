@@ -25,6 +25,7 @@ export function createLancamentos() {
     .fill(
       `
       <li>
+        <span class="new-product">NOVO</span>
         <img src=${shirtImage} alt="Produto" />
         <div class="product-info">
           <h3>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
