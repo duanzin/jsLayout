@@ -26,14 +26,14 @@ export function createFooter() {
                 <i class="fa-brands fa-tiktok"></i>
               </div>
             </li>
-            <li>
+            <li class="desktop-info">
               <h4>Institucional</h4>
               <h5>Sobre Nós</h5>
               <h5>Nossas Lojas</h5>
               <h5>Privacidade e Segurança</h5>
               <h5>Termos e Condições</h5>
             </li>
-            <li>
+            <li class="desktop-info">
               <h4>Central de Ajuda</h4>
               <h5>Fale Conosco</h5>
               <h5>Frete e Entrega</h5>
@@ -41,7 +41,7 @@ export function createFooter() {
               <h5>Formas de Pagamento</h5>
               <h5>FAQ</h5>
             </li>
-            <li>
+            <li class="desktop-info">
               <h4>Atendimento</h4>
               <h5><b>Telefone: </b> (00) 1234-5678</h5>
               <h5><b>E-mail: </b> exemplo@exemplo.com.br</h5>
@@ -51,6 +51,16 @@ export function createFooter() {
                 </br>Domingos e Feriados: 07h00 às 21h00
                 </p>
               </h5>
+            </li>
+            <li class="mobile-info">
+              <h4>Institucional</h4>
+              <i class="material-icons-outlined">keyboard_arrow_down</i>
+            </li><li class="mobile-info">
+              <h4>Central de Ajuda</h4>
+              <i class="material-icons-outlined">keyboard_arrow_down</i>
+            </li><li class="mobile-info">
+              <h4>Atendimento</h4>
+              <i class="material-icons-outlined">keyboard_arrow_down</i>
             </li>
           </ul>
           <div class = "footer-info-logos">
