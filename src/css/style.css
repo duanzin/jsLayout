@@ -712,6 +712,52 @@ header {
   letter-spacing: 5%;
 }
 
+@media (max-width: 1179px) {
+  .banner {
+    max-height: auto;
+    height: auto;
+    min-height: 390px;
+    padding: 0 16px;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: auto;
+    min-height: 390px;
+    min-width: 391px;
+  }
+}
+
+@media (max-width: 1099px) {
+  .banner-content {
+    min-width: 350px;
+  }
+  .banner-content h2 {
+    font-size: 24px;
+  }
+
+  .banner-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 849px) {
+  .banner {
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+  }
+
+  .banner img{
+    max-width: 530px;
+  }
+
+  .banner-content {
+    padding: 0;
+  }
+}
+
 .second-banner {
   width: 100vw;
   height: 819px;
