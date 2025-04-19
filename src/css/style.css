@@ -646,6 +646,33 @@ header {
   cursor: pointer;
 }
 
+@media (max-width: 1319px) {
+  .lancamentos {
+    margin: 45px 16px;
+  }
+}
+
+@media (max-width: 1039px) {
+  .product-list {
+    gap: 10px;
+  }
+
+  .product-list li {
+    height: 365px;
+    width: 174px;
+  }
+
+  .product-list li img {
+    width: 158px;
+    height: 158px;
+  }
+
+  .product-list li button {
+    width: 158px;
+    height: 40px;
+  }
+}
+
 .banner {
   max-width: 1177px;
   height: 747px;
