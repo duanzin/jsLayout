@@ -40,7 +40,7 @@ header {
   margin: 0 auto;
 }
 
-.header-main i:first-child {
+.mobile-header-icon {
   display:none;
 }
 
@@ -324,7 +324,7 @@ header {
     gap: 10px;
   }
 
-  .header-main i:first-child {
+  .mobile-header-icon {
     display: flex;
     align-items: center;
     justify-content: center;
