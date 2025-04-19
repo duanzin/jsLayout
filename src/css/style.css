@@ -652,7 +652,7 @@ header {
   }
 }
 
-@media (max-width: 1039px) {
+@media (max-width: 1179px) {
   .product-list {
     gap: 10px;
   }
@@ -761,13 +761,18 @@ header {
 .second-banner {
   width: 100vw;
   height: 819px;
-  padding: 41px;
+  padding: 41px 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 50px;
   background-color: #DEDEDE;
+}
+
+.second-banner img {
+  max-width: 652px;
+  height: auto;
 }
 
 .second-banner-text {
@@ -783,7 +788,7 @@ header {
 }
 
 .second-banner-text h2 {
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 140%;
@@ -800,8 +805,8 @@ header {
 }
 
 .second-banner-text div p {
-  width: 360px;
-  font-family: Nunito;
+  max-width: 360px;
+  font-family: 'Nunito', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
@@ -821,6 +826,79 @@ header {
 .second-banner-text div span i {
   font-size: 42px;
   color: #FFFFFF;
+}
+
+@media (max-width: 1254px) {
+  .second-banner {
+    height: auto;
+    gap: 0;
+    justify-content: space-around;
+  }
+  
+  .second-banner img {
+    max-width: 50%;
+    height: auto;
+    min-height: 349px;
+    min-width: 349px;
+  }
+
+  .second-banner-text {
+    padding: 0;
+    gap: 30px;
+    min-width: 390px;
+  }
+
+  .second-banner-text div p {
+    min-width: 276px;
+  }
+}
+
+@media (max-width: 974px) {
+  .second-banner {
+    padding: 28px 20px;
+  }
+  .second-banner-text h2 {
+    font-size: 20px;
+  }
+
+  .second-banner-text div span {
+    height: 60px;
+    width: 60px;
+    min-height: 60px;
+    min-width: 60px;
+  }
+  
+  .second-banner-text div span i {
+    font-size: 30px;
+  }
+
+  .second-banner-text {
+    width: 100%;
+    min-width: 25%;
+  }
+
+  .second-banner-text div p {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 789px) {
+  .second-banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .second-banner img {
+    order: 0;
+  }
+
+  .second-banner-text {
+    order: 1;
+    width: fit-content;
+  }
 }
 
 .third-banner {
