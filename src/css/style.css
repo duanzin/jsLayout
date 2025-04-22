@@ -459,6 +459,7 @@ header {
   .sale-text {
     position: sticky;
     right: 0;
+    padding: 0 10px;
     max-width: 100%;
     word-wrap: break-word;
     overflow-wrap: break-word;
