@@ -708,6 +708,12 @@ header {
   }
 }
 
+@media (max-width: 799px) {
+  .carousel-wrapper .arrow {
+    display: none;
+  }
+}
+
 .banner {
   max-width: 1177px;
   height: 747px;
