@@ -14,7 +14,7 @@ Layout responsivo de um site de vendas.
 
 1. **Clone o repositório**:
    ```
-   git clone https://github.com/seu-usuario/avanti-layout.git
+   git clone https://github.com/duanzin/jsLayout.git
    ```
 
 2. **Instale as dependências**:
