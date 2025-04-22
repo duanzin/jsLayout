@@ -5,19 +5,44 @@ export function createLancamentos() {
     const productList = document.querySelector(".product-list");
     const arrowBack = document.querySelector(".arrow-back");
     const arrowForward = document.querySelector(".arrow-forward");
-
+  
     let scrollPosition = 0;
     const scrollAmount = 255;
-
+  
     arrowForward.addEventListener("click", () => {
       const maxScroll = productList.scrollWidth - productList.clientWidth;
       scrollPosition = Math.min(scrollPosition + scrollAmount, maxScroll);
       productList.style.transform = `translateX(-${scrollPosition}px)`;
     });
-
+  
     arrowBack.addEventListener("click", () => {
       scrollPosition = Math.max(scrollPosition - scrollAmount, 0);
       productList.style.transform = `translateX(-${scrollPosition}px)`;
+    });
+  
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+  
+    productList.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    });
+  
+    productList.addEventListener("touchmove", (e) => {
+      if (!isDragging) return;
+      currentX = e.touches[0].clientX;
+      const deltaX = startX - currentX;
+  
+      const maxScroll = productList.scrollWidth - productList.clientWidth;
+      scrollPosition = Math.min(Math.max(scrollPosition + deltaX, 0), maxScroll);
+      productList.style.transform = `translateX(-${scrollPosition}px)`;
+  
+      startX = currentX;
+    });
+  
+    productList.addEventListener("touchend", () => {
+      isDragging = false;
     });
   });
 

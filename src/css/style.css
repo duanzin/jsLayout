@@ -673,6 +673,10 @@ header {
 }
 
 @media (max-width: 1179px) {
+  .carousel-container {
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
+  }
   .product-list {
     gap: 10px;
   }
