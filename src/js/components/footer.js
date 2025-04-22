@@ -1,19 +1,74 @@
-import AvantiLogo from '../../images/Grupo 21089.svg';
-import Boleto from '../../images/icon-boleto___ffe2ba684569d29f8e546b10457c48f8.svg';
-import Pix from '../../images/União 39.svg';
-import Paypal from '../../images/União 38.svg';
-import PaymentMethod from '../../images/c.svg';
-import Elo from '../../images/elo.svg';
-import Hipercard from '../../images/Caminho 19362.svg';
-import Visa from '../../images/visa.svg';
-import Mastercard from '../../images/União 32.svg';
-import Amex from '../../images/União 34.svg';
-import Encrypt from '../../images/Group.svg';
-import Vtex from '../../images/vtex-pci-200.png';
-import Vtex2 from '../../images/vtex-logo.svg';
+import AvantiLogo from "../../images/Grupo 21089.svg";
+import Boleto from "../../images/icon-boleto___ffe2ba684569d29f8e546b10457c48f8.svg";
+import Pix from "../../images/União 39.svg";
+import Paypal from "../../images/União 38.svg";
+import PaymentMethod from "../../images/c.svg";
+import Elo from "../../images/elo.svg";
+import Hipercard from "../../images/Caminho 19362.svg";
+import Visa from "../../images/visa.svg";
+import Mastercard from "../../images/União 32.svg";
+import Amex from "../../images/União 34.svg";
+import Encrypt from "../../images/Group.svg";
+import Vtex from "../../images/vtex-pci-200.png";
+import Vtex2 from "../../images/vtex-logo.svg";
 
 export function createFooter() {
-    return `
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileInfoItems = document.querySelectorAll(".mobile-info");
+
+    mobileInfoItems.forEach((item) => {
+      const toggleIcon = item.querySelector("i");
+      const sectionTitle = item.querySelector("h4").textContent;
+
+      toggleIcon.addEventListener("click", () => {
+        const existingContent = item.nextElementSibling;
+        if (
+          existingContent &&
+          existingContent.classList.contains("mobile-content")
+        ) {
+          existingContent.remove();
+          return;
+        }
+
+        let contentHTML = "";
+        if (sectionTitle === "Institucional") {
+          contentHTML = `
+            <div class="mobile-content">
+              <h5>Sobre Nós</h5>
+              <h5>Nossas Lojas</h5>
+              <h5>Privacidade e Segurança</h5>
+              <h5>Termos e Condições</h5>
+            </div>
+          `;
+        } else if (sectionTitle === "Central de Ajuda") {
+          contentHTML = `
+            <div class="mobile-content">
+              <h5>Fale Conosco</h5>
+              <h5>Frete e Entrega</h5>
+              <h5>Trocas e Devoluções</h5>
+              <h5>Formas de Pagamento</h5>
+              <h5>FAQ</h5>
+            </div>
+          `;
+        } else if (sectionTitle === "Atendimento") {
+          contentHTML = `
+            <div class="mobile-content">
+              <h5><b>Telefone:</b> (00) 1234-5678</h5>
+              <h5><b>E-mail:</b> exemplo@exemplo.com.br</h5>
+              <h5>
+                <b>Horário de Atendimento:</b>
+                <p>Segunda a Sábado: 07h00 às 23h00</br>Domingos e Feriados: 07h00 às 21h00</p>
+              </h5>
+            </div>
+          `;
+        }
+
+        item.insertAdjacentHTML("afterend", contentHTML);
+      });
+    });
+  });
+
+  return `
       <footer>
         <div class="footer-info">
           <ul>
@@ -92,4 +147,4 @@ export function createFooter() {
         </div>
       </footer>
     `;
-  }
+}
