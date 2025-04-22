@@ -8,25 +8,31 @@ export function createLancamentos() {
   
     let scrollPosition = 0;
     const scrollAmount = 255;
+    let isDragging = false;
+    let startX = 0;
+    let currentX = 0;
+  
+    const setTransition = (enable) => {
+      productList.style.transition = enable ? "transform 0.5s ease-in-out" : "none";
+    };
   
     arrowForward.addEventListener("click", () => {
       const maxScroll = productList.scrollWidth - productList.clientWidth;
       scrollPosition = Math.min(scrollPosition + scrollAmount, maxScroll);
+      setTransition(true);
       productList.style.transform = `translateX(-${scrollPosition}px)`;
     });
   
     arrowBack.addEventListener("click", () => {
       scrollPosition = Math.max(scrollPosition - scrollAmount, 0);
+      setTransition(true);
       productList.style.transform = `translateX(-${scrollPosition}px)`;
     });
-  
-    let startX = 0;
-    let currentX = 0;
-    let isDragging = false;
   
     productList.addEventListener("touchstart", (e) => {
       startX = e.touches[0].clientX;
       isDragging = true;
+      setTransition(false);
     });
   
     productList.addEventListener("touchmove", (e) => {
@@ -43,6 +49,7 @@ export function createLancamentos() {
   
     productList.addEventListener("touchend", () => {
       isDragging = false;
+      setTransition(true);
     });
   });
 
