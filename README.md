@@ -1,6 +1,3 @@
-Aqui está um exemplo de um arquivo `README.md` para o seu projeto:
-
----
 # Avanti Layout
 
 Layout responsivo de um site de vendas.
